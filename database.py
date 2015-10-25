@@ -1,13 +1,19 @@
 from pymongo import MongoClient
 
-def addToDB(personalImgURL, nameTag):
-	client = MongoClient()
-	db = client.taglettDB
-	collection = db.TrainingImages
+client = MongoClient()
+db = client.taglettDB
+collection = db.TrainingImages
 
+def addToDB(personalImgURL, nameTag):
 	image = {
 		"personalImgURL": str(personalImgURL),
 		"name_tag": str(nameTag)
 	}
 	
-	collection.insert_one(image)
+	return collection.insert_one(image)
+
+def getImageData(name):
+	name = name.strip(' \t\n\r')
+	name = name.replace(' ', '_')
+
+	return collection.find({"name_tag" : name})
