@@ -10,3 +10,6 @@ def train(ImgURL, name):
 
 	# train the model
 	clarifai.train(name)
+
+#def predictResult(name):
+	
