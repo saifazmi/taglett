@@ -23,6 +23,21 @@ def submit():
 def thankyou():
 	return render_template('thankyou.html')
 
+@app.route('/letsClarifai')
+def letsClarifai():
+	return render_template('letsClarifai.html')
+
+@app.route('/startClarifaing')
+def startClarifaing():
+	error = None
+	if request.method == 'POST':
+		imgURL = request.form['personalImgURL']
+		imgFile = request.files['personalImgFile']
+		magic.check(imgFile, imgURL)
+		return redirect('/thankyou')
+	else:
+		return abort(405) #method not allowed
+		
 if __name__ == '__main__':
     app.debug = True
     app.run()

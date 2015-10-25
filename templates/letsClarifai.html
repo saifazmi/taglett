@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lets Clarifai</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Forgot Who You Are?</a></li>
+        </ul>
+    </nav>
+    <form name="imageUpload" action="/startClarifaing" method="POST" enctype="multipart/form-data">
+            <h3>Choose a picture from your computer</h3>
+            <p></p>
+            <label for="personalImgURL">Image URL:</label>
+            <p></p>
+            <input type="url" name="personalImgURL" style="color: black;"></input>
+            <p></p>
+            <p><big><big><strong>OR</strong></big></big>
+            </p>
+            <label for="personalImgFile">Choose image:</label>
+            <input type="file" name="personalImgFile" accept="image/*"></input>
+            <p></p>
+            <div style="text-align:center;">
+                <button type="submit" class="btn btn-primary btn-md center-block">Find My Identity</button>
+            </div>
+        </form>
+</body>
+
+</html>
