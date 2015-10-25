@@ -1,6 +1,6 @@
 ##AutoTAG@brumHack_3.0  
 
-*To _RUN_ the app:* `$ python app.py`  
+**To _RUN_ the app:** `$ python app.py`  
 then open the displayed link in the browser  
 
 Link to the *Slack team:* https://ihackteam.slack.com/messages/autotag/  
