@@ -33,8 +33,8 @@ def startClarifaing():
 	if request.method == 'POST':
 		imgURL = request.form['personalImgURL']
 		imgFile = request.files['personalImgFile']
-		magic.check(imgFile, imgURL)
-		return redirect('/thankyou')
+		score = magic.check(imgFile, imgURL)
+		return render_template('score.html',score = score)
 	else:
 		return abort(405) #method not allowed
 		

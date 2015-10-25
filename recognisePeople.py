@@ -21,13 +21,12 @@ def train(ImgURL, name):
 
 	# Negative data source
 	for negative in negative_source:
-
 		clarifai.negative(negative,name)
 
 	# train the model
 	clarifai.train(name)
 
-def predictResult(testURL, name):
-	resultJSON = clarifai.predict(testURL, name)
+def predictResult(testURL):
+	resultJSON = clarifai.predict(testURL)
 	confidenceScore = resultJSON['urls'][0]['score']
-	return confidenceScore
+	return str(confidenceScore)

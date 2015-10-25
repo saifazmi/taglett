@@ -2,18 +2,27 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Lets Clarifai</title>
+    <meta charset="utf-8" />
+    <meta name="viewport content=" width-device-width, initial-scale="1" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../static/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#">Forgot Who You Are?</a></li>
-        </ul>
-    </nav>
-    <form name="imageUpload" action="/startClarifaing" method="POST" enctype="multipart/form-data">
+    <div class="container-fluid">
+        <div class="logo">
+            <img src="https://cyberdatingexpert.com/wp-content/uploads/2012/09/tagged2_reasonably_small.png" class="img-responsive" alt="Cinque Terre" />
+            <h1 class="text-center">Tagllet</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="/letsClarifai">Forgot Who You Are?</a></li>
+            </ul>
+        </nav>
+        <form name="checkImage" action="/startClarifaing" method="POST" enctype="multipart/form-data">
             <h3>Choose a picture from your computer</h3>
             <p></p>
             <label for="personalImgURL">Image URL:</label>
@@ -29,6 +38,7 @@
                 <button type="submit" class="btn btn-primary btn-md center-block">Find My Identity</button>
             </div>
         </form>
+    </div>
 </body>
 
 </html>

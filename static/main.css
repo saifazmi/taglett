@@ -1,6 +1,7 @@
 .img-responsive {
     display: inline;
 }
+
 a {
     text-decoration: none;
 }
@@ -9,6 +10,7 @@ nav {
     margin: 0;
     padding: 0;
 }
+
 nav ul {
     list-style: none;
     background: white
@@ -19,17 +21,21 @@ nav li {
     padding: 50px;
     font-size: 20px
 }
+
 h1 {
     display: inline;
     text-align: center;
 }
+
 body {
     background-color: #313C74;
     color: white;
 }
+
 div .logo {
     background-color: #182257;
 }
+
 @media (max-width: 797px) {
     body {
         padding-right: 0px;
