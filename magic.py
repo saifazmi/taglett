@@ -23,4 +23,4 @@ def upload(personalImgFile, personalImgURL, name):
 	database.addToDB(personalImgURL, name)
 
 	# Training the clarifai api
-	#train(personalImgURL, name)
+	recognisePeople.train(personalImgURL, name)
