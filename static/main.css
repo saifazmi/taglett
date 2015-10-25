@@ -1,14 +1,15 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .img-responsive {
     display: inline;
 }
 
 a {
     text-decoration: none;
-}
-
-nav {
-    margin: 0;
-    padding: 0;
 }
 
 nav ul {

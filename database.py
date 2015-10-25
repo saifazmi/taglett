@@ -15,5 +15,6 @@ def addToDB(personalImgURL, nameTag):
 def getImageData(name):
 	name = name.strip(' \t\n\r')
 	name = name.replace(' ', '_')
+	name = name.lower()
 
 	return collection.find({"name_tag" : name}).pretty()

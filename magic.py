@@ -3,6 +3,7 @@ import boto, uuid, recognisePeople, database
 def upload(personalImgFile, personalImgURL, name):
 	name = name.strip(' \t\n\r')
 	name = name.replace(' ', '_')
+	name = name.lower()
 
 	if not personalImgURL :
 		#convert path to url by storing in aws s3
@@ -25,7 +26,7 @@ def upload(personalImgFile, personalImgURL, name):
 	# Training the clarifai api
 	recognisePeople.train(personalImgURL, name)
 
-def check(personalImgFile, personalImgURL):
+def check(personalImgFile, personalImgURL, name):
 
 	if not personalImgURL :
 		#convert path to url by storing in aws s3
@@ -43,5 +44,5 @@ def check(personalImgFile, personalImgURL):
 		personalImgURL = key.generate_url(expires_in=0, query_auth=False, force_http=True)
 
 	# Getting the score of prediction
-	score = recognisePeople.predictResult(personalImgURL)
+	score = recognisePeople.predictResult(personalImgURL, name)
 	return score

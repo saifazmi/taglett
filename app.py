@@ -26,12 +26,13 @@ def thankyou():
 def letsClarifai():
 	return render_template('letsClarifai.html')
 
-@app.route('/startClarifaing')
+@app.route('/startClarifaing', methods=['POST'])
 def startClarifaing():
 	if request.method == 'POST':
+		name = request.form['name']
 		imgURL = request.form['personalImgURL']
 		imgFile = request.files['personalImgFile']
-		score = magic.check(imgFile, imgURL)
+		score = magic.check(imgFile, imgURL,name)
 		return render_template('score.html',score = score)
 	else:
 		return abort(405) #method not allowed

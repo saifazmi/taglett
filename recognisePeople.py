@@ -26,7 +26,7 @@ def train(ImgURL, name):
 	# train the model
 	clarifai.train(name)
 
-def predictResult(testURL):
-	resultJSON = clarifai.predict(testURL)
+def predictResult(testURL, name):
+	resultJSON = clarifai.predict(testURL, name)
 	confidenceScore = resultJSON['urls'][0]['score']
 	return str(confidenceScore)
