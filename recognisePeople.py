@@ -29,4 +29,4 @@ def train(ImgURL, name):
 def predictResult(testURL, name):
 	resultJSON = clarifai.predict(testURL, name)
 	confidenceScore = resultJSON['urls'][0]['score']
-	return str(confidenceScore)
+	return str('{percent:.2%}'.format(percent=confidenceScore))
