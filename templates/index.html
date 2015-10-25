@@ -17,7 +17,7 @@
             <img src="https://cyberdatingexpert.com/wp-content/uploads/2012/09/tagged2_reasonably_small.png" class="img-responsive" alt="Cinque Terre" />
             <h1 class="text-center">Tagllet</h1>
         </div>
-        <form name="imageUpload" action="/submit" method="POST">
+        <form name="imageUpload" action="/submit" method="POST" enctype="multipart/form-data">
             <p></p>
             <label for="name">Enter Name:</label>
             <p></p>
@@ -31,8 +31,8 @@
             <p></p>
             <p><big><big><strong>OR</strong></big></big>
             </p>
-            <label for="personalImgPath">Choose image:</label>
-            <input type="file" name="personalImgPath" accept="image/*"></input>
+            <label for="personalImgFile">Choose image:</label>
+            <input type="file" name="personalImgFile" accept="image/*"></input>
             <p></p>
             <div style="text-align:center;">
                 <button type="submit" class="btn btn-primary btn-md center-block">Send Photo</button>

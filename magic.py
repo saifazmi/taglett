@@ -1,6 +1,6 @@
 import boto, uuid, recognisePeople, database
 
-def upload(personalImgPath, personalImgURL, name):
+def upload(personalImgFile, personalImgURL, name):
 	name = name.strip(' \t\n\r')
 	name = name.replace(' ', '_')
 
@@ -14,7 +14,7 @@ def upload(personalImgPath, personalImgURL, name):
 		s3FilePath = '/taglettImages/training/%s' % filename
 
 		key = bucket.new_key(s3FilePath)
-		key.set_contents_from_filename(personalImgPath)
+		key.set_contents_from_file(personalImgFile)
 		key.set_acl('public-read')
 
 		personalImgURL = key.generate_url(expires_in=0, query_auth=False, force_http=True)

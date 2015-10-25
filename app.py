@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, abort, redirect
-import magic, os
+import magic
 app = Flask(__name__)
 
 @app.route('/')
@@ -12,8 +12,8 @@ def submit():
 	if request.method == 'POST':
 		name = request.form['name']
 		imgURL = request.form['personalImgURL']
-		imgPath = os.path.abspath(request.form['personalImgPath'])
-		magic.upload(imgPath, imgURL, name)
+		imgFile = request.files['personalImgFile']
+		magic.upload(imgFile, imgURL, name)
 		return redirect('/thankyou')
 	else:
 		return abort(405) #method not allowed
