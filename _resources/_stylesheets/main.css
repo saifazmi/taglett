@@ -1,0 +1,29 @@
+.img-responsive {
+    display: inline;
+}
+
+h1 {
+    display: inline;
+    text-align: center;
+}
+
+body {
+    background-color: #313C74;
+    color: white;
+}
+
+div .logo {
+    background-color: #182257;
+}
+
+@media (max-width: 797px) {
+    body {
+        padding-left: 0px;
+        padding-right: 0px;
+        border: none;
+    }
+    .container-fluid {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

@@ -1,10 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Auto TAG</title>
+    <title>autoTag</title>
+    <meta charset="utf-8">
+    <meta name="viewport content=" width-device-width, initial-scale=1 ">
+	<link rel="stylesheet " href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css ">
+	<link rel="stylesheet " type="text/css " href="_resources/_stylesheets/main.css ">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js "></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js "></script>
 </head>
 <body>
-        
+
+	<div class="container-fluid ">
+	<div class="logo ">
+	<img src="https://cyberdatingexpert.com/wp-content/uploads/2012/09/tagged2_reasonably_small.png " class="img-responsive " alt="Cinque Terre "></img>
+	<h1 class="text-center ">Tagllet</h1>
+	</div>
+	<h3 class="span3 divider ">Enter Person's Name</h3>
+	<div class="name ">
+ 		<input type="text " name="searchbox " style="color: black; "></input>
+ 	</div>
+ 	<p></p>	
+	<div class="imageURL ">
+ 	    	<form name="search " action="/cgi-bin/test.py " method="get ">
+ 	    	<p></p>
+ 	    	<h3>Choose a picture from your computer or online</h3>
+ 	    	<p></p>
+ 	    	<label for="imageUrl ">Image URL:</label>
+ 	    	
+ 	    	<div class="imgurl ">
+ 	    	<input type="text " name="searchbox " style="color: black; "></input>
+ 	    	</div>
+ 	    	<div class="alternative ">
+ 	    		<p></p>
+			<p><big><big><strong>OR</strong></big></big></p>
+		</div>
+		<label for="imageUrl ">Choose image:</label>
+		<div class="ChooseFile ">
+			<input type="file " name="pic " accept="image/* "></input>
+  			<p></p>
+  		</div>
+ 	    	<div style="text-align:center; ">
+ 	    	<button type="submit " class="btn btn-primary btn-md center-block ">Send Photo</button>
+ 	    	</div>
+		</form>
+	</div>
+
+	</div>
+
 </body>
 </html>
