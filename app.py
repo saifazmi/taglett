@@ -8,7 +8,6 @@ def index():
 
 @app.route('/submit', methods=['POST'])
 def submit():
-	error = None
 	if request.method == 'POST':
 		name = request.form['name']
 		imgURL = request.form['personalImgURL']
@@ -29,7 +28,6 @@ def letsClarifai():
 
 @app.route('/startClarifaing')
 def startClarifaing():
-	error = None
 	if request.method == 'POST':
 		imgURL = request.form['personalImgURL']
 		imgFile = request.files['personalImgFile']
