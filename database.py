@@ -16,4 +16,4 @@ def getImageData(name):
 	name = name.strip(' \t\n\r')
 	name = name.replace(' ', '_')
 
-	return collection.find({"name_tag" : name})
+	return collection.find({"name_tag" : name}).pretty()
