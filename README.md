@@ -1,6 +1,7 @@
 ##AutoTAG@brumHack_3.0  
 
 ####To RUN the app   
+- `cd` to project root
 - Copy and run this command in terminal: `$ python app.py`  
 - Then open the displayed link in the browser  
 
