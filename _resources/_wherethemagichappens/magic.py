@@ -2,7 +2,7 @@ import cgi, boto, uuid, recognisePeople
 
 form = cgi.FieldStorage()
 name = form.getvalue('name')
-personalImgURL = form.getvalue('personalImgURL')
+personalImgURL = form.getvalue('personalImgPath')
 
 connS3 = boto.connect_s3()
 bucket = conn.get_bucket('taglet.com')
