@@ -1,6 +1,6 @@
-##AutoTAG@brumHack_3.0  
+## AutoTAG@brumHack_3.0  
 
-####To RUN the app   
+#### To RUN the app   
 - `cd` to project root
 - Copy and run this command in terminal: `$ python app.py`  
 - Then open the displayed link in the browser  
@@ -12,5 +12,5 @@ Link to the [Clarifai repo](https://github.com/Clarifai/hackathon)
 
 Please _checkout_ a new branch for every feature **DO NOT**  work on the `master` branch.
 
-####TODO:  
+#### TODO:  
 - Figure out what to do with that data :P  
